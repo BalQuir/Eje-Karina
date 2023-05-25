@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html>
-	
 <head>
-	<i> <h1> <font color="#ffffff"> Idea de Eje integrador </font> </h1> </i>
-	
-<style>
-	body {
-		font-family: "Helvetica",
-		font-size: 20px;
-		text-align: center;
-			}
-	</style>
-	</head>
-	<body bgcolor="#ff6666">
-	<p> <h4> <font color="990000"> Soy Karina Estefani Balderas Quiroz, cada trimestre de la universidad se enfoca en presentar un proyecto mas una investigacion final que se enfoque a problematizar algun aspecto social, y en alguno casos (como en mi carrera) representar ideas artisticas; en esta pagina se pretende presentar un poco de la propuesta de mi proyecto de eje integrador. En este trimestre, buscamos representar los riesgos que conlleva que te suplanten la identidad en aplicaciones de citas </font> </h4> </p>
-		<p> <h4> Se tiene como objetivo realizar un cortometraje que hable sobre la problematica, representando diferentes experiencias de alguna manera, una narrativa que lleve historias cruzadas asi incluyendo la no linealidad </h4> </p>
-		<p> <h4> Este sitio web sera la parte principal del proyecto, ya que sera la que alberge todo el proyecto y su proceso; estara dividida en 3 partes, en la primera habra una seccion de informacion sobre el tema, mas precauciones y algun conjnto de datos que comprueben lo que estamos problematizando acompañada de recurso visuales como imagenes y videos. La segunda parte, albergara el proceso de creacion del video mas los bocetos, pruebas y proceso de edicion, de igual manera, tendra el cronograma de actividades que se designo para cada parte y la descripcion; en la parte final, se presentara el cortometraje con una seccion de comentarios para futuras recomendaciones o opiniones del proyecto final.</h4> </p>
-	<img src="--tinder.png">
-	</body>
+  <style>
+    body {
+      background-color: black;
+    }
+    
+    .clock-text {
+      font-family: "Didot", monospace;
+      font-size: 50px;
+      color: black;
+      text-align: center;
+      margin-top: 200px;
+    }
+    
+    .neon-text {
+      position: relative;
+      display: inline-block;
+      color: #00ff00;
+      text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 70px #00ff00, 0 0 80px #00ff00, 0 0 100px #00ff00, 0 0 150px #00ff00;
+    }
+  </style>
+</head>
+<body>
+  <div class="clock-text">
+    <span id="text" class="neon-text"></span>
+  </div>
+
+  <script>
+    const text = "Hay una chica nueva en la escuela que sabe todo lo malo que va a pasar";
+    const textElement = document.getElementById('text');
+    let index = 0;
+
+    function typeWriter() {
+      if (index < text.length) {
+        textElement.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100); // Ajusta el valor para cambiar la velocidad de escritura
+      }
+    }
+
+    typeWriter();
+  </script>
+</body>
 </html>
